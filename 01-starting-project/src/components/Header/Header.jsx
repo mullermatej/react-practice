@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import reactImg from '../../assets/react-core-concepts.png';
 import './Header.css';
 
@@ -8,7 +9,13 @@ function getRandomInt(max) {
 }
 
 function Header() {
+    const [title, setTitle] = useState('React Essentials');
     const description = reactDescriptions[getRandomInt(2)];
+
+    function handleClick() {
+        if (title === 'React Essentials') setTitle("Let's learn React");
+        else setTitle('React Essentials');
+    }
 
     return (
         <header>
@@ -16,7 +23,13 @@ function Header() {
                 src={reactImg}
                 alt="Stylized atom"
             />
-            <h1>React Essentials</h1>
+            <h1>{title}</h1>
+            <button
+                id="my-button"
+                onClick={handleClick}
+            >
+                Change title
+            </button>
             <p>{description} React concepts you will need for almost any app you are going to build!</p>
         </header>
     );

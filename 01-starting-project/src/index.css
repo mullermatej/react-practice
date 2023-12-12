@@ -120,3 +120,21 @@ main h2 {
 #tab-content code {
     font-size: 1rem;
 }
+
+#my-button {
+    margin-bottom: 0.67rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #7925d3;
+    color: #ebe7ef;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#my-button:hover {
+    background-color: #1b082f;
+    color: #ebe7ef;
+}
